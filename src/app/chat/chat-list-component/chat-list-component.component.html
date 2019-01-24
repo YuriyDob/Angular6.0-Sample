@@ -1,0 +1,15 @@
+<div class="chat-wrapper">
+  <h2 class="chat-title">Items</h2>
+  <div class="new-chat">
+    <input class="input-text" type="text" [(ngModel)]="newChatName" placeholder="Type name here...">
+    <button class="add-new-chat" (click)="addChat()" [disabled]="!newChatName.length">Add new</button>
+  </div>
+  <ul class="chats" *ngIf="chatList.length">
+    <li class="chat-item" *ngFor="let chat of chatList; let i = index;" (click)="openMessages(i)"   [ngClass]="{'active':activeChat===i}">
+        <h3 class="chat-name">{{chat.chatName}}
+          <span class="chat-messages" >{{chat.messages.length}}</span>
+        </h3>
+        <button class="remove-chat" (click)="removeChat(i)">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,16 @@
+<div class="chat-wrapper" >
+  <h2 class="chat-title">{{chatList[activeChat] ? chatList[activeChat].chatName : 'Choose chat'}}</h2>
+  <div class="chat-content" *ngIf="chatList[activeChat]">
+    <ul class="comments-list" >
+      <li class="comment-item"  *ngFor="let message of chatList[activeChat].messages; ">
+        <span class="comment-image"></span>
+        <p class="comment-text">{{message.text}}</p>
+        <time>{{message.time | date: 'short'}}</time>
+      </li>
+    </ul>
+    <div class="add-comment">
+      <span class="comment-image"></span>
+      <textarea class="new-comment" (keydown.control.Enter)="sendMessage()" [(ngModel)]="messageText"></textarea>
+    </div>
+  </div>
+</div>

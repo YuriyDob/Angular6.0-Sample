@@ -1,0 +1,41 @@
+.comment-item {
+  position: relative;
+  min-height: 50px;
+  padding: 10px 0 20px 65px;
+  border-bottom: solid 1px #e7e7e7;
+}
+.chat-content{
+  margin-top: 18px;
+}
+.chat-title{
+  margin-bottom: 0;
+}
+.comment-image {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+.comment-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+time{
+  font-size: 12px;
+}
+.add-comment{
+  position: relative;
+  padding: 10px 0 20px 65px;
+}
+.add-comment .comment-image{
+  background: #e3e3e3;
+}
+.new-comment{
+  width: 100%;
+  height: 60px;
+  border: solid 1px #e3e3e3;
+  border-radius: 5px;
+}
